@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - emptylog >=0.0.4
+    - emptylog >=0.0.9
 
 test:
   imports:
