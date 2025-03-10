@@ -1,5 +1,5 @@
 {% set name = "escaping" %}
-{% set version = "0.0.14" %}
+{% set version = "0.0.15" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/escaping-{{ version }}.tar.gz
-  sha256: c9faf884bfafe9dd791eb87c14881f575908f6487d767ed405a01434de07238d
+  sha256: f338692500a0e7d57dd484a4a2d64aae833f71e0ce78d535ff01e4a089f9a43e
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - emptylog >=0.0.4
+    - emptylog >=0.0.9
 
 test:
   imports:
